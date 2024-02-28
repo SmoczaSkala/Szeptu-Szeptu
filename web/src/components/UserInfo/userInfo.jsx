@@ -1,6 +1,7 @@
 import React from "react";
+import "../../scss/userInfo.scss";
 
-const userInfo = () => {
+const UserInfo = () => {
   return (
     <div className="userInfo">
       <div className="user">
@@ -27,4 +28,4 @@ const userInfo = () => {
   );
 };
 
-export default userInfo;
+export default UserInfo;

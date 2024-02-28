@@ -2,7 +2,8 @@ import React from "react";
 import AppHeader from "../AppHeader/AppHeader";
 import MessageInput from "../MessageInput/MessageInput";
 import Contacts from "../contacts/contacts";
-import userInfo from "../UserInfo/userInfo";
+import UserInfo from "../UserInfo/userInfo";
+import "../../scss/ChatApp.scss";
 
 const ChatApp = () => {
   return (
@@ -11,7 +12,7 @@ const ChatApp = () => {
       <div className="app">
         <Contacts />
         <MessageInput />
-        <userInfo />
+        <UserInfo />
       </div>
     </div>
   );
