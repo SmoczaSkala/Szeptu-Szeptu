@@ -38,6 +38,15 @@ const AppHeader = () => {
               <img className="call" src="" alt="" />
             </a>
           </div>
+          <div className="send-message">
+            <a href="">
+              <img className="add-photo" src="" alt="" />
+            </a>
+            <input type="text" placeholder="Type a message here" />
+            <a href="">
+              <img className="arrow" src="" alt="" />
+            </a>
+          </div>
         </div>
         <div className="user-info">
           <div className="user">
