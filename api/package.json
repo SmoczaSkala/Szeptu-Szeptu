@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "MongoDB Node.js driver and Atlas Starter Application",
   "main": "app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mongodb-university/atlas_starter_nodejs.git"
