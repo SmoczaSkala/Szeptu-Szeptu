@@ -1,10 +1,10 @@
-import './App.css';
-import ChatApp from './components/ChatApp/ChatApp';
+import "./App.css";
+import MainPage from "./components/Main-Page/Main-page";
 
 function App() {
   return (
     <div className="App">
-      <ChatApp/>
+      <MainPage />
     </div>
   );
 }

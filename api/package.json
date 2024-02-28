@@ -4,7 +4,7 @@
   "description": "MongoDB Node.js driver and Atlas Starter Application",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/mongodb-university/atlas_starter_nodejs#readme",
   "dependencies": {
-    "mongodb": "^3.5.9"
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^3.5.9",
+    "mongoose": "^8.2.0"
   }
 }

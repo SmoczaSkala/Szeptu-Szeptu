@@ -1,7 +1,7 @@
 import React from "react";
 import "../../scss/Main-page.scss";
 
-const AppHeader = () => {
+const MainPage = () => {
   return (
     <div className="main-page">
       <div className="nav-bar">
@@ -10,16 +10,17 @@ const AppHeader = () => {
           <img className="search" src="/search.png" alt="" />
         </a>
         <a href="">
-          <img className="friends" src="" alt="" />
+          <img className="home" src="/home.png" alt="" />
         </a>
         <a href="">
-          <img className="home" src="" alt="" />
+          <img className="friends" src="/people.png" alt="" />
         </a>
-        <a href="">
-          <img src="notifications" alt="" />
-        </a>
+
         <div className="user">
-          <img className="profile-img" src="" alt="" />
+          <a href="">
+            <img className="notifications" src="/notification.png" alt="" />
+          </a>
+          <img className="profile-img" src="/user.png" alt="" />
           <h1 className="username">Jan Kowalski</h1>
         </div>
       </div>
@@ -65,4 +66,4 @@ const AppHeader = () => {
   );
 };
 
-export default AppHeader;
+export default MainPage;
