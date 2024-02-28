@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const MessageInput = () => {
-  const [newMessage, setNewMessage] = useState('');
+  const [newMessage, setNewMessage] = useState("");
 
   const handleInputChange = (e) => {
     setNewMessage(e.target.value);
@@ -10,7 +10,7 @@ const MessageInput = () => {
   const handleSendMessage = () => {
     console.log(`Wysłano nową wiadomość: ${newMessage}`);
     //logika wysyłania wiadomosci do serwera
-    setNewMessage('');
+    setNewMessage("");
   };
 
   return (
@@ -26,4 +26,4 @@ const MessageInput = () => {
   );
 };
 
-export default MessageInput; 
+export default MessageInput;
