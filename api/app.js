@@ -3,9 +3,9 @@ const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
-const usersApi = require("./server/users/users.route");
-const loginApi = require("./server/login");
-const messagesApi = require("./server/messages/message.route");
+const usersApi = require("./users/users.route");
+const loginApi = require("./login");
+const messagesApi = require("./../api/mesages/mesages.route");
 
 app.use("/", express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
