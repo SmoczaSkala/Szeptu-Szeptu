@@ -1,6 +1,7 @@
 .nav-bar {
   display: flex;
   justify-content: space-between;
+  background-color: #242339;
 
   img {
     height: 40px;
@@ -10,6 +11,7 @@
 
   .name {
     margin-left: 20px;
+    color: white;
   }
   .user {
     display: flex;

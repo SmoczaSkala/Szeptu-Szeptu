@@ -1,5 +1,5 @@
 import React from "react";
-import "./../../../scss/MainPage.scss";
+import "./../../../scss/views-scss/MainPage.scss";
 import Chat from "../../Chat/Chat";
 import UserInfo from "../../User-Info/User-Info";
 import Conversations from "../../Conversations/Conversations";
