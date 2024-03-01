@@ -1,15 +1,18 @@
 import React from "react";
-import "../../scss/Main-page.scss";
+import "./../../../scss/MainPage.scss";
+import Chat from "../../Chat/Chat";
+import UserInfo from "../../User-Info/User-Info";
+import Conversations from "../../Conversations/Conversations";
+import AppHeader from "../../App-header/App-Header";
 
 const MainPage = () => {
   return (
-    <div className="main-page">
-      <div className="conversations">
-        <h1>Konwersacje</h1>
-        <input type="text" placeholder="Search here" />
-        <div className="chats">
-          <h1>Mateusz Kozłowski</h1>
-        </div>
+    <div className="MainPage">
+      <AppHeader />
+      <div className="content">
+        <Conversations />
+        <Chat />
+        <UserInfo />
       </div>
     </div>
   );
