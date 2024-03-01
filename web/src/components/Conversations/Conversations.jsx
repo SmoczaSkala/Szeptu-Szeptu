@@ -26,8 +26,8 @@ const Conversations = () => {
     <div className="conversations">
       <div className="conversations-title-input">
         <h1>Konwersacje</h1>
-        <input type="text" placeholder="Wyszukaj konwersacje" />
       </div>
+      <input type="text" placeholder="Wyszukaj konwersacje" />
       <div className="conversation-list">
         {users.map((user) => (
           <div key={user._id} className="conversation">

@@ -1,0 +1,31 @@
+.MainPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  header {
+    flex-shrink: 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+
+    .Chat {
+      flex: 0 0 60%;
+      margin-right: 10px;
+    }
+
+    .UserInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 20%;
+      background-color: #242339;
+      color: white;
+    }
+  }
+}

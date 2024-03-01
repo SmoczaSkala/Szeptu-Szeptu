@@ -5,7 +5,7 @@ const UserInfo = () => {
   return (
     <div className="user-info">
       <div className="user">
-        <img src="" alt="" />
+        <img src="" alt="nigga" />
         <h1>Jan Kowalski</h1>
         <h6 className="status">Online</h6>
       </div>

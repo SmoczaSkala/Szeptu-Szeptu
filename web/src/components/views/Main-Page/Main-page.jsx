@@ -8,7 +8,9 @@ import AppHeader from "../../App-header/App-Header";
 const MainPage = () => {
   return (
     <div className="MainPage">
-      <AppHeader />
+      <header>
+        <AppHeader />
+      </header>
       <div className="content">
         <Conversations />
         <Chat />

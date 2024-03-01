@@ -3,28 +3,28 @@ import { AuthProvider } from "./AuthContext";
 import { useAuth } from "./AuthContext";
 import MainPage from "./components/views/Main-Page/Main-page";
 import LoginForm from "./components/views/Login-Form/Login-form";
+import Register from "./components/Register/Register";
 
 const PrivateRoute = ({ element }) => {
   const { token } = useAuth();
   console.log("Token in PrivateRoute:", token);
 
-  return token ? element : <Navigate to="/" />;
+  return token ? element : <Navigate to="/login" />;
 };
 
 const App = () => {
   return (
     <div className="App">
-      <AuthProvider>
+      {/* <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<LoginForm />} />
-            <Route
-              path="/dashboard"
-              element={<PrivateRoute element={<MainPage />} />}
-            />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/" element={<PrivateRoute element={<MainPage />} />} />
           </Routes>
         </BrowserRouter>
-      </AuthProvider>
+      </AuthProvider> */}
+      <MainPage />
     </div>
   );
 };

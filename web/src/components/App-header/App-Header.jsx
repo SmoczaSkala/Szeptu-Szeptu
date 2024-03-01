@@ -8,7 +8,9 @@ const AppHeader = () => {
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
         <img className="search" src="/search.png" alt="" />
       </a>
-      <img className="home" src="/home.png" alt="" />
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img className="home" src="/home.png" alt="" />
+      </a>
 
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
         <img className="friends" src="/people.png" alt="" />
