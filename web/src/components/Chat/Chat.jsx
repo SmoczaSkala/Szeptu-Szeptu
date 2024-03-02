@@ -5,7 +5,6 @@ const Chat = () => {
   return (
     <div className="chat">
       <div className="chat-user">
-        <div className="profile">
           <div className="left-side">
             <img className="avatar" src="/account.png" alt="avatar" />
             <h1>Jan Kowalski</h1>
@@ -14,8 +13,9 @@ const Chat = () => {
             <img src="/facetime-button.png" alt="" />
             <img src="telephone.png" alt="" />
           </div>
-        </div>
-
+      </div>
+      <div className="messages">
+        {/* tu beda wiadomosci mapowane */}
       </div>
       <div className="send-message">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">

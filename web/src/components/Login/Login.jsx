@@ -5,7 +5,7 @@ import axios from "axios";
 const Login = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
-    username: "", // Zmiana pola "email" na "username"
+    username: "", 
     password: "",
   });
 
@@ -20,10 +20,10 @@ const Login = () => {
   const loginFn = async (e) => {
     e.preventDefault();
 
-    // Sprawdź, czy użytkownik podał nazwę użytkownika i hasło
+
     if (userData.username && userData.password) {
       try {
-        // Wysyłaj tylko pole username
+
         const response = await axios.post("/api/user/login", {
           username: userData.username,
           password: userData.password,

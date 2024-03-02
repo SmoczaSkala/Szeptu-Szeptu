@@ -1,16 +1,17 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { AuthProvider } from "./AuthContext";
-import { useAuth } from "./AuthContext";
+// import { Navigate } from "react-router-dom";
+// // import { BrowserRouter, Routes, Route } from "react-router-dom";
+// // import { AuthProvider } from "./AuthContext";
+// // import LoginForm from "./components/views/Login-Form/Login-form";
+// // import Register from "./components/Register/Register";
+// import { useAuth } from "./AuthContext";
 import MainPage from "./components/views/Main-Page/Main-page";
-import LoginForm from "./components/views/Login-Form/Login-form";
-import Register from "./components/Register/Register";
 
-const PrivateRoute = ({ element }) => {
-  const { token } = useAuth();
-  console.log("Token in PrivateRoute:", token);
+// const PrivateRoute = ({ element }) => {
+//   const { token } = useAuth();
+//   console.log("Token in PrivateRoute:", token);
 
-  return token ? element : <Navigate to="/login" />;
-};
+//   return token ? element : <Navigate to="/login" />;
+// };
 
 const App = () => {
   return (

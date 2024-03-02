@@ -6,13 +6,14 @@ const userLogin = async (req, res) => {
   const { username, password } = credentials;
 
   try {
-    const user = await Users.findOne({ username, password });
+    const cfg = { username, password };
+    const user = await Users.findOne(cfg);
 
     if (user) {
       const token = jwt.sign(
         {
           id: user._id,
-          email: user.email,
+          username: user.username,
         },
         "SzeptuSzeptu"
       );
@@ -25,7 +26,6 @@ const userLogin = async (req, res) => {
     return res.status(500).json({ success: false });
   }
 };
-
 module.exports = {
   userLogin,
 };
