@@ -7,12 +7,20 @@ const UserInfo = () => {
       <div className="user">
         <img src="" alt="nigga" />
         <h1>Jan Kowalski</h1>
-        <h6 className="status">Online</h6>
       </div>
       <div className="user-options">
-        <h2>Add to favorite</h2>
-        <h2>Block user</h2>
-        <h2>View Profile</h2>
+        <div className="favorite">
+          <img src="/favorite.png" alt="" />
+          <h2>Add to favorite</h2>
+        </div>
+        <div className="block">
+          <img src="/blocked.png" alt="" />
+          <h2>Block user</h2>
+        </div>
+        <div className="view-profile">
+          <img src="/account.png" alt="" />
+          <h2>View Profile</h2>
+        </div>
       </div>
     </div>
   );

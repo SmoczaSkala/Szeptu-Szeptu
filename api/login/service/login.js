@@ -6,7 +6,6 @@ const userLogin = async (req, res) => {
   const { username, password } = credentials;
 
   try {
-    // Szukaj użytkownika tylko po nazwie użytkownika
     const user = await Users.findOne({ username, password });
 
     if (user) {
