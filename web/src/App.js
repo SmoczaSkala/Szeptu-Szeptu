@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
-import { useAuth } from "./AuthContext";
-import MainPage from "./components/views/Main-Page/Main-page";
 import LoginForm from "./components/views/Login-Form/Login-form";
 import Register from "./components/Register/Register";
+import { useAuth } from "./AuthContext";
+import MainPage from "./components/views/Main-Page/Main-page";
 
 const PrivateRoute = ({ element }) => {
   const { token } = useAuth();
@@ -15,7 +16,7 @@ const PrivateRoute = ({ element }) => {
 const App = () => {
   return (
     <div className="App">
-      {/* <AuthProvider>
+      <AuthProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<LoginForm />} />
@@ -23,8 +24,8 @@ const App = () => {
             <Route path="/" element={<PrivateRoute element={<MainPage />} />} />
           </Routes>
         </BrowserRouter>
-      </AuthProvider> */}
-      <MainPage />
+      </AuthProvider>
+      {/* <MainPage /> */}
     </div>
   );
 };

@@ -1,9 +1,10 @@
 import React from "react";
+import "./../../scss/RegisterPhoto.scss";
 
 const RegisterPhoto = () => {
   return (
     <div className="register-photo">
-      <h1>cos tam</h1>
+      <img src="/minimalistic.png" alt="" />
     </div>
   );
 };

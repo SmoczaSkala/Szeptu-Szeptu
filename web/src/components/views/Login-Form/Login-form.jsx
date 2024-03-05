@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "../../Login/Login";
 import RegisterPhoto from "../../FormPhoto/RegisterPhoto";
+import "./../../../scss/views-scss/LoginForm.scss";
 
 const LoginForm = () => {
   return (
