@@ -40,13 +40,8 @@ const Chat = () => {
           <img src="/facetime-button.png" alt="" />
           <img src="telephone.png" alt="" />
         </div>
-<<<<<<< HEAD
-=======
       </div>
-      <div className="messages">
-        {/* tu beda wiadomosci mapowane */}
->>>>>>> Kamil
-      </div>
+      <div className="messages">{/* tu beda wiadomosci mapowane */}</div>
       <div className="messages">{/* tu beda wiadomosci mapowane */}</div>
       <div className="send-message">
         <img
@@ -62,11 +57,7 @@ const Chat = () => {
           onChange={handleMessageChange}
         />
         <button>
-<<<<<<< HEAD
           <img className="arrow" src="/send.png" alt="" onClick={sendMessage} />
-=======
-        <img className="arrow" src="/send.png" alt="" onClick={sendMessage} />
->>>>>>> Kamil
         </button>
       </div>
     </div>
