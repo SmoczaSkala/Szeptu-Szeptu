@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "../../scss/RegisterPage.scss";
 
 const Register = () => {
   const [userData, setUserData] = useState({

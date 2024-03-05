@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  height: 957px;
+  width: 1878px;
+
+  input {
+    width: 200px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    color: white;
+  }
+}
