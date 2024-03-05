@@ -16,7 +16,7 @@ const PrivateRoute = ({ element }) => {
 const App = () => {
   return (
     <div className="App">
-      {/* <AuthProvider>
+      <AuthProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<LoginForm />} />
@@ -24,8 +24,8 @@ const App = () => {
             <Route path="/" element={<PrivateRoute element={<MainPage />} />} />
           </Routes>
         </BrowserRouter>
-      </AuthProvider> */}
-      <MainPage />
+      </AuthProvider>
+      {/* <MainPage /> */}
     </div>
   );
 };

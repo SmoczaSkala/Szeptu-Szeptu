@@ -48,6 +48,10 @@ const Login = () => {
     }
   };
 
+  const handleRegisterClick = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="login-container">
       <div className="form">
@@ -82,6 +86,9 @@ const Login = () => {
           <h4>
             Po poprawnym zalogowaniu zostaniesz przekierowany na stronę główną.
           </h4>
+          <button type="button" onClick={handleRegisterClick}>
+            Zarejestruj się
+          </button>
         </form>
       </div>
     </div>
