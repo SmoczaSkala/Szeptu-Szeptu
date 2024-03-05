@@ -1,0 +1,14 @@
+.register-photo {
+  background-color: #31304f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 2px solid #242339;
+  padding: 0 20px;
+
+  img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
