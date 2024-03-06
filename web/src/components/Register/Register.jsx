@@ -1,8 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 import "./../../scss/Register.scss";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [userData, setUserData] = useState({
     name: "",
     surname: "",
@@ -31,11 +33,14 @@ const Register = () => {
 
       if (data.success) {
         console.log("Użytkownik został dodany pomyślnie:", data.user);
-        // Możesz dodać dalsze działania po dodaniu użytkownika, np. przekierowanie do innej strony
       }
     } catch (error) {
       console.error("Błąd podczas dodawania użytkownika:", error);
     }
+  };
+
+  const handleLoginClick = () => {
+    navigate("/login");
   };
 
   return (
@@ -93,7 +98,10 @@ const Register = () => {
             value={userData.password}
             onChange={handleChange}
           />
-          <button type="submit">Dodaj użytkownika</button>
+          <button type="submit">Zarejestruj się</button>
+          <button type="submit" onClick={handleLoginClick}>
+            Zaloguj się
+          </button>
         </form>
       </div>
     </div>
