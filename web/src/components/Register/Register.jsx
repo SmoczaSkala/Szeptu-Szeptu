@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "../../scss/RegisterPage.scss";
+import "./../../scss/Register.scss";
 
 const Register = () => {
   const [userData, setUserData] = useState({
@@ -39,8 +39,9 @@ const Register = () => {
   };
 
   return (
-    <div className="add-user-form-container">
-      <div className="form">
+    <div className="register-container">
+      <div className="Register-form">
+        <h2>Szeptu-Szeptu</h2>
         <h2>Dodaj użytkownika</h2>
         <form onSubmit={handleSubmit}>
           <input

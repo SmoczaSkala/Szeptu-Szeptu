@@ -2,7 +2,7 @@ import { Navigate } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
 import LoginForm from "./components/views/Login-Form/Login-form";
-import Register from "./components/Register/Register";
+import RegisterForm from "./components/views/Register-Form/Register-Form";
 import { useAuth } from "./AuthContext";
 import MainPage from "./components/views/Main-Page/Main-page";
 
@@ -20,7 +20,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<LoginForm />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<RegisterForm />} />
             <Route path="/" element={<PrivateRoute element={<MainPage />} />} />
           </Routes>
         </BrowserRouter>

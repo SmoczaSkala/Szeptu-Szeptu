@@ -1,7 +1,6 @@
 import React from "react";
 import Register from "../../Register/Register";
 import RegisterPhoto from "../../FormPhoto/RegisterPhoto";
-import { Navigate } from "react-router-dom";
 
 const RegisterForm = () => {
   return (

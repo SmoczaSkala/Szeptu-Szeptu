@@ -54,7 +54,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <div className="form">
+      <div className="Login-form">
         <h2>Szeptu - Szeptu</h2>
         <form onSubmit={loginFn}>
           <input
