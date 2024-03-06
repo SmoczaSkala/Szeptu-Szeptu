@@ -26,6 +26,8 @@ const Login = () => {
   const loginFn = async (e) => {
     e.preventDefault();
 
+    console.log("Dane logowania:", userData); // Dodaj tę linię
+
     if (userData.username && userData.password) {
       try {
         const response = await axios.post("/api/user/login", {
