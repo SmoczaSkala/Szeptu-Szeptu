@@ -6,8 +6,7 @@ const userLogin = async (req, res) => {
   const { username, password } = credentials;
 
   try {
-    const cfg = { username, password };
-    const user = await Users.findOne(cfg);
+    const user = await Users.findOne({ username, password });
 
     if (user) {
       const token = jwt.sign(
@@ -23,9 +22,11 @@ const userLogin = async (req, res) => {
 
     return res.status(200).json({ success: false });
   } catch (error) {
+    console.error("Błąd logowania:", error);
     return res.status(500).json({ success: false });
   }
 };
+
 module.exports = {
   userLogin,
 };

@@ -40,10 +40,11 @@ const Login = () => {
           } else {
             sessionStorage.setItem("token", data.token);
           }
+          // Przekieruj użytkownika do dashboardu
           navigate("/dashboard");
         }
       } catch (error) {
-        console.error("Login error:", error);
+        console.error("Błąd logowania:", error);
       }
     }
   };
