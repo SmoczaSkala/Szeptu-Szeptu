@@ -100,7 +100,7 @@ const Register = () => {
           />
           <button type="submit">Zarejestruj się</button>
           <button type="submit" onClick={handleLoginClick}>
-            Zaloguj się
+            Powrót do logowania
           </button>
         </form>
       </div>
