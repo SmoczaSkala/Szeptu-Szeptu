@@ -49,9 +49,7 @@ const addUser = async (req, res) => {
 
     const newUser = await Users.create(user);
 
-    newUser.save();
-
-    return res.status(200).json({ success: true });
+    return res.status(200).json({ success: true, user: newUser });
   } catch (error) {
     return res.status(500).json({ success: false });
   }

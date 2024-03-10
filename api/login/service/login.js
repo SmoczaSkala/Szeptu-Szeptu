@@ -5,8 +5,12 @@ const userLogin = async (req, res) => {
   const credentials = req.body;
   const { username, password } = credentials;
 
+  console.log(credentials);
+
   try {
-    const user = await Users.findOne({ username, password });
+    const user = await Users.find({ username, password });
+
+    console.log(user);
 
     if (user) {
       const token = jwt.sign(
