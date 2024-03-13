@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext } from "react";
 
 const AuthContext = createContext();
 
@@ -11,9 +11,9 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
+  const token = sessionStorage.getItem("token");
+  if (!token) {
+    throw new Error("No token found in sessionStorage");
   }
-  return context;
+  return token;
 };
