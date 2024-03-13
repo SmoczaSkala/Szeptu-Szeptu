@@ -33,6 +33,9 @@ const Register = () => {
 
       if (data.success) {
         console.log("Użytkownik został dodany pomyślnie:", data.user);
+        navigate("/login");
+      } else {
+        console.error("Registration failed:", data.message);
       }
     } catch (error) {
       console.error("Błąd podczas dodawania użytkownika:", error);

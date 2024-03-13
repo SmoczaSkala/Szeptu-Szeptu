@@ -26,6 +26,8 @@ const Login = () => {
   const loginFn = async (e) => {
     e.preventDefault();
 
+    console.log("Dane logowania:", userData);
+
     if (userData.username && userData.password) {
       try {
         const response = await axios.post("/api/user/login", {
@@ -40,10 +42,10 @@ const Login = () => {
           } else {
             sessionStorage.setItem("token", data.token);
           }
-          navigate("/dashboard");
+          navigate("/");
         }
       } catch (error) {
-        console.error("Login error:", error);
+        console.error("Błąd logowania:", error);
       }
     }
   };

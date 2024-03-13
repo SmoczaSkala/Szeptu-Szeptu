@@ -25,7 +25,6 @@ const App = () => {
           </Routes>
         </BrowserRouter>
       </AuthProvider>
-      {/* <MainPage /> */}
     </div>
   );
 };
