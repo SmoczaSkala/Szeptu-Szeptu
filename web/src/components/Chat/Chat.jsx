@@ -11,21 +11,17 @@ const Chat = () => {
 
   const sendMessage = async () => {
     try {
-      // Tutaj należy dodać logikę do pobrania tokena użytkownika
-      const token = ""; // Pobierz token użytkownika (np. z kontekstu lub stanu)
+      const token = "";
 
-      // Wysłanie wiadomości do serwera
       await axios.post("/api/messages", {
         token: token,
-        receiver: "Odbiorca", // Tutaj należy podać odbiorcę wiadomości
+        receiver: "Odbiorca",
         content: message,
       });
 
-      // Wyczyszczenie pola wprowadzania wiadomości po pomyślnym wysłaniu
       setMessage("");
     } catch (error) {
       console.error("Błąd podczas wysyłania wiadomości:", error);
-      // Tutaj możemy dodać obsługę błędu, np. wyświetlić komunikat dla użytkownika
     }
   };
 

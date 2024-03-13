@@ -10,10 +10,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export const useAuth = () => {
-  const token = sessionStorage.getItem("token");
-  if (!token) {
-    throw new Error("No token found in sessionStorage");
-  }
-  return token;
-};
+export const useAuth = () =>
+  sessionStorage.getItem("token") || localStorage.getItem("token");
