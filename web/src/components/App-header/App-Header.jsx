@@ -1,6 +1,12 @@
 import React from "react";
 import "./../../scss/AppHeader.scss";
 
+const handleLogout = () => {
+  sessionStorage.removeItem("token");
+  localStorage.clear();
+  window.location.reload();
+};
+
 const AppHeader = () => {
   return (
     <div className="nav-bar">
@@ -22,6 +28,7 @@ const AppHeader = () => {
         </a>
         <img className="profile-img" src="/user.png" alt="" />
         <h1 className="username">Jan Kowalski</h1>
+        <button onClick={handleLogout}>Wyloguj się</button>
       </div>
     </div>
   );

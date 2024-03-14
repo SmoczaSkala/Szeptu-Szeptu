@@ -12,3 +12,5 @@ export const AuthProvider = ({ children }) => {
 
 export const useAuth = () =>
   sessionStorage.getItem("token") || localStorage.getItem("token");
+
+export default AuthContext;

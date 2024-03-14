@@ -10,8 +10,9 @@ const Register = () => {
     surname: "",
     city: "",
     dateOfBirth: "",
-    acces: false,
+    acces: "false",
     mail: "",
+    avatar: "",
     username: "",
     password: "",
   });
