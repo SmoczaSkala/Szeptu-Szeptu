@@ -7,7 +7,8 @@ const addUser = async (req, res) => {
   try {
     const token = jwt.sign(
       {
-        admin: false,
+        id: user._id,
+        username: user.username,
       },
       "SzeptuSzeptu"
     );
