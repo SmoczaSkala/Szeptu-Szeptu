@@ -32,7 +32,6 @@ const Register = () => {
       const data = response.data;
 
       if (data.success) {
-        console.log("Użytkownik został dodany pomyślnie:", data.user);
         navigate("/login");
       } else {
         console.error("Registration failed:", data.message);

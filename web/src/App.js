@@ -8,8 +8,6 @@ import MainPage from "./components/views/Main-Page/Main-page";
 
 const PrivateRoute = ({ element }) => {
   const token = useAuth();
-  console.log("Token in PrivateRoute:", token);
-
   return token ? element : <Navigate to="/login" />;
 };
 
