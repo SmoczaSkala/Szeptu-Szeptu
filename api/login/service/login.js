@@ -8,7 +8,7 @@ const userLogin = async (req, res) => {
   console.log(credentials);
 
   try {
-    const user = await Users.find({ username, password });
+    const user = await Users.findOne({ username, password });
 
     console.log(user);
 

@@ -9,7 +9,8 @@ const Conversations = () => {
       try {
         const response = await fetch("/api/users");
         const data = await response.json();
-        if (Array.isArray(data.users)) {
+
+        if (data.success && data.users) {
           setUsers(data.users);
         } else {
           console.error("Received data is not in the expected format:", data);
@@ -29,11 +30,10 @@ const Conversations = () => {
       </div>
       <input type="text" placeholder="Wyszukaj konwersacje" />
       <div className="conversation-list">
-        {users.map((user) => (
-          <div key={user._id} className="conversation">
+        {users.map((username) => (
+          <div key={username} className="conversation">
             <div className="conversation-info">
-              <h3>{user.username}</h3>
-              <h2>{user.email}</h2>
+              <h3>{username}</h3>
             </div>
           </div>
         ))}
