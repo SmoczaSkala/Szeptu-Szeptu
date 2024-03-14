@@ -38,9 +38,9 @@ const Login = () => {
 
         if (data.success && data.token) {
           if (logoutAfterSession) {
-            localStorage.setItem("token", data.token);
-          } else {
             sessionStorage.setItem("token", data.token);
+          } else {
+            localStorage.setItem("token", data.token);
           }
           navigate("/");
         }
