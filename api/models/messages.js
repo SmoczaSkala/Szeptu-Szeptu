@@ -13,14 +13,11 @@ const MessageSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  read: {
-    type: Boolean,
-    default: false,
-  },
   sentAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-module.exports = mongoose.model("Message", MessageSchema);
+const Messages = mongoose.model("messages", MessageSchema);
+module.exports = Messages;

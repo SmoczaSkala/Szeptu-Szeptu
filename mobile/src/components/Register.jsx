@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 
-const Register = () => {
+const Register = ({ navigation }) => {
   const [userData, setUserData] = useState({
     name: "",
     surname: "",
@@ -37,7 +37,7 @@ const Register = () => {
   };
 
   const handleLoginClick = () => {
-    navigate("/login");
+    navigation.navigate("Login");
   };
 
   return (
