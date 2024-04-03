@@ -5,7 +5,8 @@ const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const usersApi = require("./users/users.route");
 const loginApi = require("./login/login.route");
-const messagesApi = require("./../api/mesages/mesages.route");
+const receivedMessagesApi = require("./../api/mesages/mesages.route");
+const sentMessagesApi = require("./../api/mesages/mesages.route");
 const registerApi = require("./register/register.route");
 
 app.use("/", express.static(__dirname + "/public"));
@@ -15,7 +16,8 @@ app.use(cookieParser());
 app.use(usersApi);
 app.use(loginApi);
 app.use(registerApi);
-app.use(messagesApi);
+app.use(receivedMessagesApi);
+app.user(sentMessagesApi);
 
 const db =
   // kongoDB
