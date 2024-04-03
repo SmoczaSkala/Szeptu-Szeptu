@@ -8,7 +8,7 @@ const ReceivedMessages = ({ userId }) => {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(
-          `/users/messages/received?token=${sessionStorage.getItem("token")}`
+          `/api/messages/received?token=${sessionStorage.getItem("token")}`
         );
         setMessages(response.data.messages);
       } catch (error) {
@@ -23,6 +23,23 @@ const ReceivedMessages = ({ userId }) => {
       fetchMessages();
     }
   }, [userId]);
+
+  return (
+    <div>
+      <ul>
+        {messages.map((message) => {
+          return (
+            <li key={message._id}>
+              <strong>Od:</strong> {message.receiver}, <strong>Data:</strong>{" "}
+              {message.sentAt}
+              <br />
+              {message.content}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 };
 
 export default ReceivedMessages;
