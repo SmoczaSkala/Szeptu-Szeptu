@@ -54,7 +54,7 @@ const Chat = () => {
     try {
       const token = "";
 
-      await axios.post("/api/messages", {
+      await axios.post("/api/messages/send", {
         token: token,
         receiver: "Odbiorca",
         content: message,

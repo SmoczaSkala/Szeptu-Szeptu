@@ -7,6 +7,7 @@ const usersApi = require("./users/users.route");
 const loginApi = require("./login/login.route");
 const receivedMessagesApi = require("./../api/mesages/mesages.route");
 const sentMessagesApi = require("./../api/mesages/mesages.route");
+const sendMessagesApi = require("./../api/mesages/mesages.route");
 const registerApi = require("./register/register.route");
 
 app.use("/", express.static(__dirname + "/public"));
@@ -17,7 +18,8 @@ app.use(usersApi);
 app.use(loginApi);
 app.use(registerApi);
 app.use(receivedMessagesApi);
-app.user(sentMessagesApi);
+app.use(sentMessagesApi);
+app.use(sendMessagesApi);
 
 const db =
   // kongoDB
