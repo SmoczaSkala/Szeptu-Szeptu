@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
@@ -22,7 +22,7 @@ const Chat = () => {
         setReceivedMessages(receivedResponse.data.messages);
 
         const sentResponse = await axios.get(
-          `/api/messages/sent?token${sessionStorage.getItem("token")}`
+          `/api/messages/sent?token=${sessionStorage.getItem("token")}`
         );
         setSentMessages(sentResponse.data.messages);
       } catch (error) {
@@ -52,7 +52,7 @@ const Chat = () => {
 
   const sendMessage = async () => {
     try {
-      const token = "";
+      const token = sessionStorage.getItem("token");
 
       await axios.post("/api/messages/send", {
         token: token,

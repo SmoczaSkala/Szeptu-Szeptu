@@ -1,4 +1,4 @@
-const Message = require("./../../models/messages");
+const Messages = require("./../../models/messages");
 const Users = require("./../../models/users");
 const jwt = require("jsonwebtoken");
 
@@ -21,15 +21,11 @@ const loadReceivedMessages = async (req, res) => {
         .json({ success: false, message: "Unauthorized: Invalid user" });
     }
 
+    console.log(decoded.id);
+
     const decodedUserId = userId;
 
-    if (userId !== decodedUserId) {
-      return res
-        .status(401)
-        .json({ success: false, message: "Unauthorized: Invalid user ID" });
-    }
-
-    const receivedMessages = await Message.find({ receiver: userId });
+    const receivedMessages = await Messages.find({ receiver: userId });
 
     return res.status(200).json({ success: true, messages: receivedMessages });
   } catch (error) {
@@ -57,7 +53,7 @@ const loadSentMessages = async (req, res) => {
         .json({ success: false, message: "Unauthorized: Invalid user ID" });
     }
 
-    const sentMessages = await Message.find({ sender: userId });
+    const sentMessages = await Messages.find({ sender: userId });
 
     return res.status(200).json({ success: true, messages: sentMessages });
   } catch (error) {
@@ -105,7 +101,7 @@ const addMessage = async (req, res) => {
     const decoded = jwt.verify(token, "SzeptuSzeptu");
 
     if (!decoded.email) {
-      return res.status(200).json({ success: false });
+      return res.status(200).json({ success: true });
     }
 
     const newEmail = {

@@ -7,6 +7,7 @@ module.exports = function (app) {
       "/api/messages/received",
       "/api/messages/sent",
       "/api/user/login",
+      "/api/messages/send",
     ],
     createProxyMiddleware({
       target: "http://localhost:8080/",

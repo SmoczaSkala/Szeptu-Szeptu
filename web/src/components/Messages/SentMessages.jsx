@@ -8,7 +8,7 @@ const SentMessages = ({ userId }) => {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(
-          `/api/messegaes/sent?token=${sessionStorage.getItem("token")}`
+          `/api/messages/sent?token=${sessionStorage.getItem("token")}`
         );
         setmessages(response.data.messages);
       } catch (error) {

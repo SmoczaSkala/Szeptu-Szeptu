@@ -40,7 +40,7 @@ const Login = () => {
           if (logoutAfterSession) {
             sessionStorage.setItem("token", data.token);
           } else {
-            localStorage.setItem("token", data.token);
+            sessionStorage.setItem("token", data.token);
           }
           navigate("/");
         }
